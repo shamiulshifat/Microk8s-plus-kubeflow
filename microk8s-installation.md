@@ -26,3 +26,13 @@ alias kubectl='microk8s kubectl'
 For more details:
 https://microk8s.io/docs/getting-started
 *******************
+For enabling kubernetes dashboard:
+https://docs.giantswarm.io/app-platform/apps/kubernetes-dashboard/
+```
+kubectl create serviceaccount cluster-admin-dashboard-sa
+kubectl create clusterrolebinding cluster-admin-dashboard-sa \
+  --clusterrole=cluster-admin \
+  --serviceaccount=default:cluster-admin-dashboard-sa
+  ```
+  then copy the token and enter in the daswhboard.
+  *********************************
