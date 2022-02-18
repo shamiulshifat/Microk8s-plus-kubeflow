@@ -35,4 +35,8 @@ kubectl create clusterrolebinding cluster-admin-dashboard-sa \
   --serviceaccount=default:cluster-admin-dashboard-sa
   ```
   then copy the token and enter in the daswhboard.
+  ```
+  kubectl get secret | grep cluster-admin-dashboard-sa
+  kubectl describe secret <enter cluster name from above code>
+  ```
   *********************************
