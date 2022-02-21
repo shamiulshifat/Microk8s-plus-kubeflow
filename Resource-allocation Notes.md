@@ -22,6 +22,9 @@ https://www.fairwinds.com/blog/introducing-goldilocks-a-tool-for-recommending-re
 video tutorial:
 https://www.youtube.com/watch?v=WwiRDJ9THMc
 
+another:
+https://www.civo.com/learn/fairwinds-goldilocks-kubernetes-resource-recommendation-tool
+
 example:
 ```
 helm repo add fairwinds-stable https://charts.fairwinds.com/stable
