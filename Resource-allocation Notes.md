@@ -17,6 +17,11 @@ When configured, it will set the requests automatically based on usage and thus 
 It will also maintain ratios between limits and requests that were specified in initial containers configuration.
 https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler
 
+tutorial:
+https://www.kubecost.com/kubernetes-autoscaling/kubernetes-vpa/
+
+https://www.densify.com/kubernetes-autoscaling/kubernetes-vpa
+
 4. Goldilocks dashboard- for autoadjusting resources
 https://www.fairwinds.com/blog/introducing-goldilocks-a-tool-for-recommending-resource-requests
 video tutorial:
@@ -24,6 +29,9 @@ https://www.youtube.com/watch?v=WwiRDJ9THMc
 
 another:
 https://www.civo.com/learn/fairwinds-goldilocks-kubernetes-resource-recommendation-tool
+
+another:
+https://milindchawre.github.io/site/blog/fairwinds-goldilocks-kubernetes-resource-recommendation-tool/
 
 example:
 ```
