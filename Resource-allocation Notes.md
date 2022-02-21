@@ -19,8 +19,42 @@ https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler
 
 4. Goldilocks dashboard- for autoadjusting resources
 https://www.fairwinds.com/blog/introducing-goldilocks-a-tool-for-recommending-resource-requests
+video tutorial:
+https://www.youtube.com/watch?v=WwiRDJ9THMc
+
+example:
+```
+helm repo add fairwinds-stable https://charts.fairwinds.com/stable
+
+helm install goldilocks fairwinds-stable/goldilocks --namespace goldilocks --set installVAP=true
+
+kubectl get pods --namespace goldilocks
+kubectl get svc
+
+kubectl get vpa --all-namespaces
+
+kubectl get po -n demo
+
+kubectl label ns default goldilocks.fairwinds.com/enabled=true
+
+kubectl get vpa -n demo
+
+#port forward to localport 127.0.0.1:8080
+kubectl -n goldilocks port-forward svc/goldilocks-dashboard 8080:80
+
+```
 
 
 ****************************************
 ## Configure Quality of Service for Pods:
 https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/
+
+*************************************
+************************************
+Pipeline Resource Allocation on Kubeflow:
+
+Pipelines are run as "workflow" kind on k8s.
+
+set resource limits for each components of pipelines:
+https://kubeflow-pipelines.readthedocs.io/en/stable/_modules/kfp/dsl/_container_op.html
+
