@@ -21,6 +21,8 @@ microk8s status --wait-ready
 Set alias kubectl from microk8s kubectl :
 ```
 alias kubectl='microk8s kubectl'
+
+sudo snap install kubectl --classic
 ```
 *******************
 For more details:
@@ -38,5 +40,10 @@ kubectl create clusterrolebinding cluster-admin-dashboard-sa \
   ```
   kubectl get secret | grep cluster-admin-dashboard-sa
   kubectl describe secret cluster-admin-dashboard-sa-token-< enter token from above code>
+  ```
+  
+  then enable proxy:
+  ```
+  kubectl proxy
   ```
   *********************************
