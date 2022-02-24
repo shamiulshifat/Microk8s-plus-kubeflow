@@ -50,3 +50,7 @@ kubectl create clusterrolebinding cluster-admin-dashboard-sa \
   To kill the proxy:
   
   https://dev4devs.com/2020/05/25/how-to-kill-the-kubectl-proxy/
+  
+  If above token not work:
+  
+  https://microk8s.io/docs/addon-dashboard
