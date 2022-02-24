@@ -47,3 +47,6 @@ kubectl create clusterrolebinding cluster-admin-dashboard-sa \
   kubectl proxy
   ```
   *********************************
+  To kill the proxy:
+  
+  https://dev4devs.com/2020/05/25/how-to-kill-the-kubectl-proxy/
