@@ -1,6 +1,6 @@
-## setup with prometheus and vpa with server-metrics:
+## setup with prometheus:
 
-https://pretired.dazwilkin.com/posts/210305/
+https://www.server-world.info/en/note?os=Ubuntu_20.04&p=microk8s&f=8
 
 **************************************
 FIRST install metrics-server:
