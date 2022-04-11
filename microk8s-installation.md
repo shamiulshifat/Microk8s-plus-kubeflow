@@ -37,7 +37,7 @@ sudo microk8s kubectl create clusterrolebinding cluster-admin-dashboard-sa \
   --clusterrole=cluster-admin \
   --serviceaccount=default:cluster-admin-dashboard-sa
   ```
-  then copy the token and enter in the daswhboard.
+  then copy the token.
   ```
   sudo microk8s kubectl get secret | grep cluster-admin-dashboard-sa
   sudo microk8s kubectl describe secret cluster-admin-dashboard-sa-token-< enter token from above code>
@@ -47,6 +47,12 @@ sudo microk8s kubectl create clusterrolebinding cluster-admin-dashboard-sa \
   ```
   sudo microk8s kubectl proxy
   ```
+  
+  then go to this address:
+  
+  http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login
+  
+  enter your copied token and save on browser for future login.
   *********************************
   To kill the proxy:
   
