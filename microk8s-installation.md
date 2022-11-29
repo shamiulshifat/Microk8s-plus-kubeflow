@@ -32,6 +32,13 @@ For enabling kubernetes dashboard:
 https://docs.giantswarm.io/app-platform/apps/kubernetes-dashboard/
 ```
 sudo microk8s enable dashboard
+microk8s kubectl describe secret -n kube-system microk8s-dashboard-token
+sudo microk8s kubectl proxy &
+---------
+then go to this address:
+  
+  http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login
+-------------------
 sudo microk8s kubectl create serviceaccount cluster-admin-dashboard-sa
 sudo microk8s kubectl create clusterrolebinding cluster-admin-dashboard-sa \
   --clusterrole=cluster-admin \
