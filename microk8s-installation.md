@@ -68,3 +68,6 @@ sudo microk8s kubectl create clusterrolebinding cluster-admin-dashboard-sa \
   If above token not work:
   
   https://microk8s.io/docs/addon-dashboard
+
+  ## for adding gpu node:
+  dont use --worker
