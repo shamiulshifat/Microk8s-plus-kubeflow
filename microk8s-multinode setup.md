@@ -1,5 +1,9 @@
  ## To setup a multinode cluster on microk8s:
  https://microk8s.io/docs/clustering
+
+ ## Note to add GPU node:
+
+ while joining to master, dont use --worker, gpu wont work
  
  ## Add roles to nodes:
  ![image](https://user-images.githubusercontent.com/36572440/154898571-f2f58d27-6696-48a2-83cf-855101ddbb5d.png)
