@@ -1,0 +1,49 @@
+1. database locked 500 from argo pods:
+
+1. Increase the dqlite Timeout
+Since dqlite uses SQLite under the hood, it uses locks to maintain data consistency. If your workload or cluster operations are putting heavy load on the datastore, you might see more frequent “database is locked” errors. Increasing the timeout can give operations more time to wait for the lock to clear.
+
+How to Increase the Timeout:
+Locate the dqlite Arguments File:
+
+The configuration for dqlite is provided via command-line arguments to the MicroK8s daemon. Typically, you can find the file here:
+
+bash
+Copy
+/var/snap/microk8s/current/args/dqlite
+Edit the File:
+
+Open the file with your preferred editor:
+
+bash
+Copy
+sudo nano /var/snap/microk8s/current/args/dqlite
+Look for a flag such as --timeout. If you see something like:
+
+bash
+Copy
+--timeout=5000
+this value (usually in milliseconds) indicates how long an operation will wait for the lock. Increase it to, for example, 60 seconds (60000 ms):
+
+diff
+Copy
+- --timeout=5000
++ --timeout=60000
+If the flag isn’t present, add it as a new line:
+
+bash
+Copy
+--timeout=60000
+Restart MicroK8s:
+
+For the change to take effect, restart MicroK8s:
+
+bash
+Copy
+sudo microk8s stop
+sudo microk8s start
+You can verify the status with:
+
+bash
+Copy
+sudo microk8s status --wait-ready
