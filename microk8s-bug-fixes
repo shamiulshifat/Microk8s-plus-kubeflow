@@ -98,7 +98,7 @@ e.g:
 10.13.159.32    SmartBuilding
 
 #now start microk8s
-
+sudo microk8s start
 #now restart machine
 sudo reboot
 
